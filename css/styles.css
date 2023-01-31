@@ -22,6 +22,7 @@
 /* Block model */
     --items: 3;
     --idnent: 24px; 
+    --main-items: 4;
 }
 
 body{
@@ -114,7 +115,8 @@ body{
 }
 .list{
     list-style: none;
-    padding-left: 0px;
+    flex-basis: calc(100% - var(--idnent) * 2) / var(--main-items);
+    
 }
 .links{
     font-weight: 500;
@@ -130,16 +132,19 @@ body{
     color: var(--other-txt-cl);
     font-size: 56px;
     line-height: calc(60/56);
-    text-align: center;
+    text-align: center; 
+    margin: 0 auto;
+    padding-bottom: 48px;
 }
 
 .hero-sec{
     background-color: var(--secondary-bg-cl);
-    height: 600px;
+    padding-top: 188px;
+    padding-bottom: 188px;
 
 }
 .hero-container{
-    margin: 48px 473px 48px 473px;
+    margin: 0 auto;
 }
 .hero-button{
     background-color: var(--accent-bg-cl);
@@ -152,8 +157,7 @@ body{
     padding: 16px 32px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    margin-right: 635px;
-    margin-left: 636px;
+    margin: 0 auto;
     display: flex;  
 }
 
@@ -163,24 +167,32 @@ body{
 } 
 
 /* First section */
-
+.feature{
+    
+}
 .first-sec{
-    align-items: center;
     display: flex;
     gap: 24px;
-    padding-left: 0px;
+    align-items: center;  
+
 }
 .pharagraphs{
     color:var(--secondary-txt-cl);
     line-height: calc(24/16);
-    width: 264px;
+    
 }
-.features{
+h3{
     font-size: 20px;
     line-height: calc(24/20);
     letter-spacing: 0.02em;
     font-weight: 500;
     margin-bottom: 8px;
+    
+}
+p{
+    color:var(--secondary-txt-cl);
+    line-height: calc(24/16);
+    
 }
 
 /* Second section */
@@ -189,8 +201,8 @@ body{
     align-items: center;
     display: flex;
     gap: 24px;
-    margin-bottom: 120px;
-    padding-left: 0px;
+    padding-top: 72px;
+    padding-bottom: 120px;
 }
 .text{
     font-size: 36px;
@@ -198,14 +210,16 @@ body{
     color:var(--primary-txt-cl);
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 72px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
-
+.subtitle{
+}
 /* Third section */
 
 .third-sec{
     background-color: var(--other-bg-cl);
-    height: 732px;
+    
     
 }
 .banner{
@@ -215,24 +229,29 @@ body{
     letter-spacing: 0.02em;
     text-align: center;
 }
+.boxes{
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
 .names{
     font-size: 20px;
     line-height: calc(24/20);
     letter-spacing: 0.02em;
     font-weight: 500;
     text-align: center;
+    padding-bottom: 8px;
+    margin: 0 auto;
 }
 .subjects{
     color:var(--secondary-txt-cl);
     line-height: calc(24/16);
-    width: 264px;
+    margin: 0 auto;
     text-align: center;
 }
 .team{
     align-items: center;
     display: flex;
     gap: 24px;
-    padding-bottom: 120px;
     padding-left: 0px;
     margin-top: 72px;
     
@@ -253,9 +272,8 @@ body{
 .footer{
     font-size: 18px;
     line-height: calc(21/18);
-    
-    height: 310px;
     padding-top: 100px;
+    padding-bottom: 100px;
     background-color: var(--secondary-bg-cl);
 }
 .footer-logo{
@@ -300,27 +318,19 @@ body{
     background-color: var(--primary-other-cl);
 
 }
-.activities{
+.features{
     font-size: 20px;
     line-height: calc(24/20);
     color: var(--primary-txt-cl);
     letter-spacing: 0.02em;
     font-weight: 500;
-    padding-left: 16px;
+    margin-top: auto;
 }
+
 .profession{
-    background: #FFFFFF;
-    border: 1px solid #E7E9FC;
     width: calc(100% - var(--idnent) * 2) /var(--items);
-    width: 360px;
-    height: 420px;
 }
-.description{
-    color:var(--secondary-txt-cl);
-    line-height: calc(24/16);
-    width: 264px;
-    padding-left: 16px;
-}
+
 .container{
     width: 1158px;
     padding-left: 15px;
@@ -334,7 +344,6 @@ body{
     justify-content: center;  
     gap: 24px;
     margin-bottom: 72px;
-    margin-top: 96px;
 }
 .sec-links{
     display: flex;
@@ -343,15 +352,39 @@ body{
     display: flex;
     flex-wrap: wrap;
     gap: 48px 24px;
-    margin-bottom: 120px;
+    
+}
+.jobs{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    background: #FFFFFF;
+    border-left: 1px solid #E7E9FC;
+    border-right: 1px solid #E7E9FC;
+    border-bottom: 1px solid #E7E9FC;
+    
+}
+.border{
+    background: #FFFFFF;
+
+
+border: 1px solid #E7E9FC;
 }
 .section{
     padding-top: 120px;
+    padding-bottom: 120px;
+    
 }
 ul{
     padding: 0px;
     margin: 0px;
 }
-.cont{
-    flex-basis: calc(100% - var(--idnent)* 2) / var(--items);
+.cont-item{
+    flex-basis: calc(100% - var(--idnent) * 2) / var(--items);
+    list-style: none;
+}
+.borders{
+    background: #FFFFFF;
+    border: 1px solid #E7E9FC;
+    
 }
